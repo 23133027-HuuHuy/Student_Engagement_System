@@ -1,0 +1,41 @@
+# Student Engagement System - Dependencies
+# Hệ thống phân loại mức độ hứng thú học tập của sinh viên
+
+# Core dependencies
+numpy>=1.21.0
+opencv-python>=4.5.0
+
+# Deep Learning (uncomment khi cần)
+# tensorflow>=2.10.0
+# torch>=2.0.0
+# torchvision>=0.15.0
+
+# Face detection
+# dlib>=19.24.0
+# mtcnn>=0.1.1
+
+# Image processing
+Pillow>=9.0.0
+scikit-image>=0.19.0
+
+# Data handling
+pandas>=1.4.0
+scikit-learn>=1.0.0
+
+# Visualization
+matplotlib>=3.5.0
+seaborn>=0.12.0
+
+# Web application (optional)
+# flask>=2.0.0
+# streamlit>=1.20.0
+
+# Utilities
+tqdm>=4.64.0
+PyYAML>=6.0
+
+# Development
+pytest>=7.0.0
+pytest-cov>=4.0.0
+black>=23.0.0
+flake8>=6.0.0

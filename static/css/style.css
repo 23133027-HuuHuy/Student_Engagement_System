@@ -1,0 +1,60 @@
+/* Student Engagement System - Main CSS */
+
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #2196F3;
+    --warning-color: #FF9800;
+    --danger-color: #f44336;
+    --background-color: #f5f5f5;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.stats-panel {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.engagement-bar {
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.engagement-fill {
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.highly-engaged { background-color: var(--primary-color); }
+.engaged { background-color: #8BC34A; }
+.neutral { background-color: #FFEB3B; }
+.disengaged { background-color: var(--warning-color); }
+.highly-disengaged { background-color: var(--danger-color); }
