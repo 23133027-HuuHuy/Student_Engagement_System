@@ -1,0 +1,68 @@
+# Configuration file for Student Engagement System
+# Cấu hình cho hệ thống phân loại mức độ hứng thú học tập
+
+# Data paths
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  models_dir: "data/models"
+
+# Face detection settings
+face_detection:
+  model: "haar_cascade"  # Options: haar_cascade, dlib, mediapipe
+  confidence_threshold: 0.5
+  min_face_size: 30
+
+# Emotion recognition settings
+emotion_recognition:
+  model: "fer"  # Options: fer, deepface, custom
+  emotions:
+    - angry
+    - disgust
+    - fear
+    - happy
+    - sad
+    - surprise
+    - neutral
+
+# Engagement classification settings
+engagement_classification:
+  classes:
+    - highly_engaged      # Rất hứng thú
+    - engaged             # Hứng thú
+    - neutral             # Bình thường
+    - disengaged          # Không hứng thú
+    - highly_disengaged   # Rất không hứng thú
+  
+  # Mapping emotions to engagement levels
+  emotion_engagement_mapping:
+    happy: "highly_engaged"
+    surprise: "engaged"
+    neutral: "neutral"
+    sad: "disengaged"
+    angry: "highly_disengaged"
+    fear: "disengaged"
+    disgust: "disengaged"
+
+# Camera/Video settings
+camera:
+  device_id: 0
+  width: 640
+  height: 480
+  fps: 30
+
+# Model training settings
+training:
+  batch_size: 32
+  epochs: 50
+  learning_rate: 0.001
+  train_split: 0.8
+  validation_split: 0.1
+  test_split: 0.1
+
+# Visualization settings
+visualization:
+  show_face_boxes: true
+  show_emotions: true
+  show_engagement: true
+  output_dir: "outputs"
