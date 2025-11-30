@@ -5,6 +5,7 @@ Engagement Dataset - Dataset class cho PyTorch/TensorFlow
 import numpy as np
 from typing import Tuple, List, Dict, Optional, Callable
 from pathlib import Path
+from collections import Counter
 import logging
 
 logger = logging.getLogger(__name__)
@@ -150,8 +151,6 @@ class EngagementDataset:
         Returns:
             Dictionary {class_id: weight}
         """
-        from collections import Counter
-        
         counts = Counter(self.labels)
         total = len(self.labels)
         
@@ -171,8 +170,6 @@ class EngagementDataset:
         Returns:
             Dictionary chứa thống kê
         """
-        from collections import Counter
-        
         counts = Counter(self.labels)
         
         stats = {

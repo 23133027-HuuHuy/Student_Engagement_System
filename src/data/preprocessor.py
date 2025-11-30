@@ -5,6 +5,7 @@ Data Preprocessor - Tiền xử lý dữ liệu
 import cv2
 import numpy as np
 from typing import List, Tuple, Optional
+from collections import Counter
 import logging
 
 logger = logging.getLogger(__name__)
@@ -155,8 +156,6 @@ class DataPreprocessor:
         Returns:
             (balanced_images, balanced_labels)
         """
-        from collections import Counter
-        
         class_counts = Counter(labels)
         max_count = max(class_counts.values())
         

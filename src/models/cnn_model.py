@@ -161,7 +161,8 @@ class EmotionCNN:
             Xác suất cho mỗi lớp
         """
         if self.model is None:
-            # Trả về kết quả mặc định
+            logger.warning("Model not loaded. Build or load a model before prediction.")
+            # Return default uniform probabilities for placeholder behavior
             return np.ones((X.shape[0], self.num_classes)) / self.num_classes
         
         return self.model.predict(X)
