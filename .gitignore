@@ -208,9 +208,7 @@ __marimo__/
 
 # Project-specific
 # Data files - large datasets
-data/raw/
-data/processed/
-data/models/
+data/
 
 # Keep the directory structure with .gitkeep files
 !data/raw/.gitkeep
