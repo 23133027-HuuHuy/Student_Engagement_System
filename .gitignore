@@ -205,3 +205,72 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Project-specific
+# Data files - large datasets
+data/raw/
+data/processed/
+data/models/
+
+# Keep the directory structure with .gitkeep files
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/models/.gitkeep
+
+# Machine Learning models
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+*.pt
+*.pth
+*.onnx
+*.pb
+*.tflite
+*.ckpt
+*.caffemodel
+*.weights
+
+# Training logs and outputs
+logs/
+runs/
+outputs/
+checkpoints/
+tensorboard/
+wandb/
+mlruns/
+
+# Image and video files (if generated/temporary)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.mp4
+*.avi
+*.mov
+
+# Keep sample images if needed
+!sample/**
+!docs/**/*.png
+!docs/**/*.jpg
+!README*.png
+!README*.jpg
+
+# Configuration files with sensitive data (uncomment if needed)
+# configs/local.yaml
+# configs/secrets.yaml
+# .env.local
+
+# Experiment results
+results/
+experiments/
+plots/
+figures/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
